@@ -1,0 +1,35 @@
+Problem Statement
+
+Create a CloudWatch alarm that sends an email using SNS notification when CPU Utilization is more than 70%.
+Creating a Status Check Alarm to check System and Instance failure and send an email using SNS notification
+
+Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+ You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications.
+
+
+ EC2/Host Level Metrics that CloudWatch monitors by default consist of
+CPU
+Network
+Disk
+
+
+There are two types of status check
+System status check: Monitor the AWS System on which your instance runs.
+ It either requires AWS involvement to repair or you can fix it by yourself by just stop/start the instance(in case of EBS volumes).
+ Examples of problems that can cause system status checks to fail
+
+ Loss of network connectivity
+* Loss of system power
+* Software issues on the physical host
+* Hardware issues on the physical host that impact network reachability
+
+
+Instance status check: Monitor the software and network configuration of an individual instance.
+ It checks/detects problems that require your involvement to repair.
+ Incorrect networking or startup configuration
+* Exhausted memory
+* Corrupted filesystem
+* Incompatible kernel
+
+
+
